@@ -53,10 +53,10 @@ $(document).ready(function() {
     var db = PouchDB(dbConfig.local);
 
     // Sync to Cloudant
-    // db.sync(dbConfig.remote, {
-    //   live: true,
-    //   retry: true,
-    // });
+    db.sync(dbConfig.remote, {
+      live: true,
+      retry: true,
+    });
 
     // Remove the spinner
     $('#messageOutput #spinner').remove();
